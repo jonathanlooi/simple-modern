@@ -1,16 +1,17 @@
-/* Markdown */
 :root{
---maincolor: red;
---bordercl:rebeccapurple;
+--maincolor: navy;
+--bordercl:#000;
 --callouctcolor:dodgerblue;
 --hovercolor:navy;
 --darkMaincolor: #50fa7b;
 }
 html {
   color: #232333;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 15px;
+  font-family: 'Computer Modern';
+  font-size: 16px;
   line-height: 1.6em;
+  background-color: #fff;
+  color: #000;
 }
 body{
   display: block;
@@ -26,8 +27,7 @@ body{
 }
 
 p {
-  font-family: 'Fira Sans', sans-serif;
-  line-height: 1.5;
+  font-family: 'Computer Modern';
 }
 
 hr {
@@ -54,16 +54,16 @@ a:hover {
 }
 
 ul {
-  list-style: none;
+  /* list-style: none; */
   padding-left: 2ch;
 }
-ul li {
+/* ul li {
   text-indent: -2ch;
-}
-ul > li::before {
+} */
+/* ul > li::before {
   content: '* ';
   font-weight: bold;
-}
+} */
 
 /* Images */
 img {
@@ -147,14 +147,32 @@ header .main {
 h1, h2, h3, h4, h5, h6 {
   font-size: 1.2rem;
   margin-top: 2em;
+  font-weight: 200;
 }
 
-h1::before { color: var(--maincolor); content: '# '; }
+.home-div {
+  margin-bottom: 6rem;
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
+.home-div p {
+  text-align: justify;
+  text-indent: 30px; /* indent */
+}
+
+.home-title {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+/* h1::before { color: var(--maincolor); content: '# '; }
 h2::before { color: var(--maincolor); content: '## '; }
 h3::before { color: var(--maincolor); content: '### '; }
 h4::before { color: var(--maincolor); content: '#### '; }
 h5::before { color: var(--maincolor); content: '##### '; }
-h6::before { color: var(--maincolor); content: '###### '; }
+h6::before { color: var(--maincolor); content: '###### '; } */
 
 .meta {
   color: #999;
@@ -165,9 +183,9 @@ h6::before { color: var(--maincolor); content: '###### '; }
 footer {
   display: flex;
   align-items: center;
-  border-top: 0.4rem dotted var(--bordercl);
+  /* border-top: 0.4rem dotted var(--bordercl); */
   padding: 2rem 0rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 .soc {
   display: flex;
@@ -277,7 +295,7 @@ color: black;
 .highlight pre code[class*='language-yml']::before,
 .highlight pre code[class*='language-yaml']::before {
 content: 'yaml';
-background: #f71e6a;
+background: #e6f114;
 color: white;
 }
 .highlight pre code[class*='language-shell']::before,
@@ -290,7 +308,7 @@ color:white
 .highlight pre code[class*='language-json']::before{
 content: 'json';
 background: dodgerblue;
- color: #000000 
+  color: #000000 
 }
 .highlight pre code[class*='language-python']::before,
 .highlight pre code[class*='language-py']::before {
